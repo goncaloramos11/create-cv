@@ -1,3 +1,16 @@
 .education{
-    margin: 30px 0px;
+    margin: 22px 0px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.school{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.date{
+    display: flex;
+    gap:5px;
 }
