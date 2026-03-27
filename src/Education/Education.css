@@ -1,13 +1,17 @@
 .education{
     margin: 22px 0px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap:20px;
+    font-size: 18px;
 }
 
 .school{
     font-weight: bold;
-    font-size: 18px;
+}
+
+.degree{
+    font-size: 16px;
 }
 
 .date{

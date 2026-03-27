@@ -20,6 +20,8 @@ function PreviewCV(){
                 <Education></Education>
                 <h2>Professional Experience</h2>
                 <Experience></Experience>
+                <Experience></Experience>
+                <Experience></Experience>
             </div>
         </div>
     );

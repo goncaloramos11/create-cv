@@ -1,0 +1,20 @@
+.experience{
+    margin: 22px 0px;
+    display: flex;
+    align-items: flex-start;
+    gap:20px;
+}
+
+.company{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.date{
+    display: flex;
+    gap:5px;
+}
+
+.description{
+    margin-top: 6px;
+}
