@@ -1,12 +1,21 @@
 import './App.css'
+import FormDetails from './FormDetails/FormDetails.jsx';
 import PreviewCV from "./PreviewCV/PreviewCV.jsx";
-import Details from "./Details/Details.jsx";
+
+import { useState } from 'react';
 
 function App() {
+
+  const [cv, setCV] = useState({
+    person: { name: "John Doe", age: "" },
+    education: [],
+    experience: []
+  });
+
   return (
     <div className="container">
-      <Details></Details>
-      <PreviewCV></PreviewCV>
+      <FormDetails cv={cv} setCV={setCV}/>
+      <PreviewCV person={cv.person}/>
     </div>
   );
 }

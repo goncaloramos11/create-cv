@@ -1,8 +1,25 @@
 import "./PersonForm.css";
 
-function PersonForm(){
+function PersonForm({ cv, setCV }){
+
+    const handleChange = (e) =>{
+        const newCV = {
+            ...cv,
+            person:{
+                name: e.target.value
+            }
+        };
+        setCV(newCV);
+    }
+
     return(
-        <h1>OLA</h1>
+        <form>
+            <label htmlFor="name">Name: </label>
+            <input 
+                onChange={handleChange}
+                type="text" 
+            />
+        </form>
     )
 }
 

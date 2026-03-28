@@ -1,18 +1,12 @@
 import Education from "../Education/Education";
 import Experience from "../Experience/Experience";
+import Person from "../Person/Person";
 import "./PreviewCV.css";
 
-function PreviewCV(){
+function PreviewCV({person}){
     return(
         <div className="cv">
-            <div className="header">
-                <div className="title">John Doe</div>
-                <div className="information">
-                    <div className="mail">johndoe@example.com</div>
-                    <div className="number">999999999</div>
-                    <div className="location">Lisbon</div>
-                </div>
-            </div>
+            <Person person = {person}/>
 
             <div className="details">
                 <h2>Education</h2>
