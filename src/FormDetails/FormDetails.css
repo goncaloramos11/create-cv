@@ -1,0 +1,3 @@
+.forms{
+    width: clamp(300px, 50%, 500px);
+}

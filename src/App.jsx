@@ -7,7 +7,7 @@ import { useState } from 'react';
 function App() {
 
   const [cv, setCV] = useState({
-    person: { name: "John Doe", age: "" },
+    person: { name: "John Doe", email: "johndoe@example.com", phone: 999999999, location: "Lisboa"},
     education: [],
     experience: []
   });
