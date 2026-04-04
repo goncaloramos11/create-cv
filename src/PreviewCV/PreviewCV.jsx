@@ -10,8 +10,9 @@ function PreviewCV({cv}){
 
             <div className="details">
                 <h2>Education</h2>
-                <Education></Education>
-                <Education></Education>
+                {cv.education.map((item) => (
+                    <Education education= {item}></Education>
+                ))}
                 <h2>Professional Experience</h2>
                 <Experience></Experience>
                 <Experience></Experience>
