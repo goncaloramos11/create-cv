@@ -15,8 +15,8 @@ function ExperienceForm({ cv, setCV }){
     }
 
     return(
-        <form>
-            <h1>Person Details</h1>
+        <form className="style-box">
+            <h1>Experience</h1>
 
             <div className="form-detail">
                 <label htmlFor="name">Name: </label>

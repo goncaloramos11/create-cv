@@ -3,10 +3,10 @@ import Experience from "../Experience/Experience";
 import Person from "../Person/Person";
 import "./PreviewCV.css";
 
-function PreviewCV({person}){
+function PreviewCV({cv}){
     return(
         <div className="cv">
-            <Person person = {person}/>
+            <Person person = {cv.person}/>
 
             <div className="details">
                 <h2>Education</h2>

@@ -1,0 +1,20 @@
+.dropdown-ul{
+    display: flex;
+    flex-direction: column;
+}
+
+li{
+    padding: 10px 0px;
+    font-size: 18px;
+}
+
+button{
+    background: none;
+    align-self: center;
+    padding: 5px 24px;
+    margin-top: 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}

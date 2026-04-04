@@ -1,0 +1,25 @@
+.dropdown{
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.education-title{
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.dropdown-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.animation{
+    transform: rotate(180deg);
+    transition: transform 1s ease; 
+
+}

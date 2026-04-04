@@ -1,5 +1,5 @@
 
-function EducationForm({ cv, setCV }){
+function EducationForm({ cv, setCV, toggleChange }){
 
     const handleChange = (e) =>{
         const value = e.target.name;
@@ -15,7 +15,6 @@ function EducationForm({ cv, setCV }){
 
     return(
         <form>
-            <h1>Person Details</h1>
 
             <div className="form-detail">
                 <label htmlFor="name">Name: </label>
@@ -57,7 +56,12 @@ function EducationForm({ cv, setCV }){
                 />
             </div>
 
+
+            <button onClick={toggleChange}>Add</button>
+
+            <button type="submit">Submit here</button>
         </form>
+
     )
 }
 

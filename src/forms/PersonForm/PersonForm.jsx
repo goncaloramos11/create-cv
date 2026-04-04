@@ -15,7 +15,7 @@ function PersonForm({ cv, setCV }){
     }
 
     return(
-        <form id="person">
+        <form className="style-box">
             <h1>Person Details</h1>
 
             <div className="form-detail">
