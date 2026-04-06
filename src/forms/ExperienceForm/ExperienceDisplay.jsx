@@ -1,13 +1,13 @@
 import {useState } from "react";
-import "./EducationForm.jsx";
-import "./EducationForm.css"
-import EducationForm from "./EducationForm.jsx";
+import "./ExperienceForm.jsx";
+import "./ExperienceForm.css"
 import Dropdown from "../../Dropdown/Dropdown.jsx";
 import person_data from "../../data/data.jsx";
 import { GoChevronDown } from "react-icons/go";
+import ExperienceForm from "./ExperienceForm.jsx";
 
 
-function EducationDisplay({cv, setCV}){
+function ExperienceDisplay({cv, setCV}){
 
     const [isActive, setIsActive] = useState(false);
     const [dropdown, setDropdown] = useState(false);
@@ -26,8 +26,8 @@ function EducationDisplay({cv, setCV}){
     return (
         <div className="dropdown">
             <div onClick={toggleDropDown} className="dropdown-header">
-                <div  className="education-title">
-                    Education
+                <div  className="experience-title">
+                    Experience
                 </div>
                 <GoChevronDown 
                     size="24px"
@@ -41,17 +41,17 @@ function EducationDisplay({cv, setCV}){
 
             {isActive ? (
                 dropdown && 
-                <EducationForm 
+                <ExperienceForm 
                 cv={cv} 
                 setCV={setCV} 
                 toggleChange={toggleChange} 
                 />
             ) : (
-                dropdown && <Dropdown toggle={toggleChange} data={cv.education} />
+                dropdown && <Dropdown toggle={toggleChange} data={cv.experience} />
             )}
         </div>
 
     );
 }
 
-export default EducationDisplay;
+export default ExperienceDisplay;

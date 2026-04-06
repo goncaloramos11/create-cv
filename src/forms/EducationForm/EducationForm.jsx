@@ -3,13 +3,21 @@ function EducationForm({ cv, setCV, toggleChange }){
 
     const handleChange = (e) =>{
         const value = e.target.name;
+        const newEducation = [...cv.education];
+        const lastIndex = newEducation.length - 1;
+        
+
+        newEducation[lastIndex] = {
+                ...newEducation[lastIndex],
+                [value]: e.target.value
+            };
+
         const newCV = {
             ...cv,
-            person:{
-                ...cv.person,
-                [value]: e.target.value
-            }
-        };
+            education: newEducation
+        };    
+        console.log(value);
+        console.log(newCV);
         setCV(newCV);
     }
 
@@ -17,32 +25,42 @@ function EducationForm({ cv, setCV, toggleChange }){
         <form>
 
             <div className="form-detail">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="school">School: </label>
                 <input 
-                    id="name"
+                    id="school"
                     onChange={handleChange}
                     type="text"
-                    name="name"
+                    name="school"
                 />
             </div>
 
             <div className="form-detail">
-                <label htmlFor="email">Email: </label>
+                <label htmlFor="degree">Degree: </label>
                 <input 
-                    id="email"
+                    id="degree"
                     onChange={handleChange}
-                    type="email" 
-                    name="email"
+                    type="text" 
+                    name="degree"
                 />
             </div>
 
             <div className="form-detail">
-                <label htmlFor="phone">Phone: </label>
+                <label htmlFor="start">Start Date: </label>
                 <input 
-                    id="phone"
+                    id="start"
                     onChange={handleChange}
-                    type="number" 
-                    name="phone"
+                    type="text" 
+                    name="start"
+                />
+            </div>
+
+            <div className="form-detail">
+                <label htmlFor="end">End Date: </label>
+                <input 
+                    id="end"
+                    onChange={handleChange}
+                    type="text" 
+                    name="end"
                 />
             </div>
 
@@ -56,8 +74,7 @@ function EducationForm({ cv, setCV, toggleChange }){
                 />
             </div>
 
-
-            <button onClick={toggleChange}>Add</button>
+            <button onClick={toggleChange}>Save</button>
 
             <button type="submit">Submit here</button>
         </form>

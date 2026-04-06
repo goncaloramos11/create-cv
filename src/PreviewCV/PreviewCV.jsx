@@ -11,7 +11,7 @@ function PreviewCV({cv}){
             <div className="details">
                 <h2>Education</h2>
                 {cv.education.map((item) => (
-                    <Education education= {item}></Education>
+                    <Education key={item.id} education= {item}></Education>
                 ))}
                 <h2>Professional Experience</h2>
                 <Experience></Experience>

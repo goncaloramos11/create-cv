@@ -8,7 +8,7 @@ function FormDetails({cv, setCV}){
     return(
         <div className="forms">
             <PersonForm cv = {cv} setCV = {setCV}></PersonForm>   
-            <EducationDisplay></EducationDisplay>
+            <EducationDisplay cv = {cv} setCV={setCV}></EducationDisplay>
             <ExperienceForm></ExperienceForm>
         </div>
     );

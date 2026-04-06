@@ -4,13 +4,21 @@ function ExperienceForm({ cv, setCV }){
 
     const handleChange = (e) =>{
         const value = e.target.name;
+        const newExperience = [...cv.experience];
+        const lastIndex = newExperience.length - 1;
+        
+
+        newExperience[lastIndex] = {
+                ...newExperience[lastIndex],
+                [value]: e.target.value
+            };
+
         const newCV = {
             ...cv,
-            person:{
-                ...cv.person,
-                [value]: e.target.value
-            }
-        };
+            experience: newExperience
+        };    
+        console.log(value);
+        console.log(newCV);
         setCV(newCV);
     }
 
