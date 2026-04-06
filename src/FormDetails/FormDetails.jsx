@@ -1,6 +1,7 @@
 import PersonForm from '../forms/PersonForm/PersonForm.jsx';
 import EducationDisplay from '../forms/EducationForm/EducationDisplay.jsx';
-import ExperienceForm from '../forms/ExperienceForm/ExperienceForm.jsx';
+import ExperienceDisplay from '../forms/ExperienceForm/ExperienceDisplay.jsx';
+
 import "./FormDetails.css";
 import "../forms/Forms.css"
 
@@ -9,7 +10,8 @@ function FormDetails({cv, setCV}){
         <div className="forms">
             <PersonForm cv = {cv} setCV = {setCV}></PersonForm>   
             <EducationDisplay cv = {cv} setCV={setCV}></EducationDisplay>
-            <ExperienceForm></ExperienceForm>
+            <ExperienceDisplay cv = {cv} setCV={setCV}></ExperienceDisplay>
+
         </div>
     );
 }

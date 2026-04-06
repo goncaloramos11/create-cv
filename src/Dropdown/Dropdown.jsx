@@ -9,7 +9,7 @@ function Dropdown({toggle, data}) {
         <div className="dropdown-ul">
             <ul>
                 {data.map((item) => (
-                    <li key={item.id}>{item.school}</li>
+                    <li key={item.id}>{item.school || item.company}</li>
                 ))}
             </ul>
             <button onClick={() => {

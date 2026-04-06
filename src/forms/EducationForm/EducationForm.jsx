@@ -76,7 +76,6 @@ function EducationForm({ cv, setCV, toggleChange }){
 
             <button onClick={toggleChange}>Save</button>
 
-            <button type="submit">Submit here</button>
         </form>
 
     )

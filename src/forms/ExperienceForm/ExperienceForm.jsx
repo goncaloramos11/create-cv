@@ -1,6 +1,6 @@
 import "./ExperienceForm.css";
 
-function ExperienceForm({ cv, setCV }){
+function ExperienceForm({ cv, setCV, toggleChange }){
 
     const handleChange = (e) =>{
         const value = e.target.name;
@@ -23,36 +23,45 @@ function ExperienceForm({ cv, setCV }){
     }
 
     return(
-        <form className="style-box">
-            <h1>Experience</h1>
+        <form>
 
             <div className="form-detail">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="company">Company: </label>
                 <input 
-                    id="name"
+                    id="company"
                     onChange={handleChange}
                     type="text"
-                    name="name"
+                    name="company"
                 />
             </div>
 
             <div className="form-detail">
-                <label htmlFor="email">Email: </label>
+                <label htmlFor="position">Position Title: </label>
                 <input 
-                    id="email"
+                    id="school"
                     onChange={handleChange}
-                    type="email" 
-                    name="email"
+                    type="text"
+                    name="position"
                 />
             </div>
 
             <div className="form-detail">
-                <label htmlFor="phone">Phone: </label>
+                <label htmlFor="start">Start Date: </label>
                 <input 
-                    id="phone"
+                    id="start"
                     onChange={handleChange}
-                    type="number" 
-                    name="phone"
+                    type="text" 
+                    name="start"
+                />
+            </div>
+
+            <div className="form-detail">
+                <label htmlFor="end">End Date: </label>
+                <input 
+                    id="end"
+                    onChange={handleChange}
+                    type="text" 
+                    name="end"
                 />
             </div>
 
@@ -65,6 +74,19 @@ function ExperienceForm({ cv, setCV }){
                     name="location"
                 />
             </div>
+
+            <div className="form-detail">
+                <label htmlFor="description">Description: </label>
+                <input 
+                    id="description"
+                    onChange={handleChange}
+                    type="textarea" 
+                    name="description"
+                />
+            </div>
+
+            <button onClick={toggleChange}>Save</button>
+
 
         </form>
     )
